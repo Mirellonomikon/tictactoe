@@ -1,10 +1,3 @@
-# We need to print a board.
-# Take in player input.
-# Place their input on the board.
-# Check if the game is won,tied, lost, or ongoing.
-# Repeat c and d until the game has been won or tied.
-# Ask if players want to play again.
-
 
 def display_board(board):
     print('\n' * 50)
@@ -20,7 +13,7 @@ def check_board(board, player):
     if board[7] == board[5] == board[3] == player or board[1] == board[5] == board[9] == player:
         return True
     for i in range(1, 4):
-        if board[i] == board[i + 3] == board[i + 3] == player:
+        if board[i] == board[i + 3] == board[i + 6] == player:
             return True
     return False
 
